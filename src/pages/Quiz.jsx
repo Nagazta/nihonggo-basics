@@ -30,7 +30,7 @@ export default function Quiz() {
 
   const question = questions[currentQuestion];
   const isMultipleChoice = type === 'multiple-choice';
-  const inputLabel = type === 'vocabulary' ? 'Enter the English meaning:' : 'Enter the romaji:';
+  const inputLabel = type === 'vocabulary' ? 'Enter the hiragana:' : 'Enter the romaji:';
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   const handleAnswer = () => {
@@ -105,7 +105,7 @@ export default function Quiz() {
           <>
             <p className="question-text">{inputLabel}</p>
             <div className="large-character">
-              {question.character || question.japanese || question.hiragana}
+              {type === 'vocabulary' ? question.english : (question.character || question.japanese || question.hiragana)}
             </div>
             <input
               type="text"
