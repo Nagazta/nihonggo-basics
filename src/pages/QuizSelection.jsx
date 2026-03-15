@@ -29,7 +29,7 @@ const quizzes = [
     id: 'vocabulary',
     icon: '📚',
     title: 'Vocabulary Quiz',
-    description: 'Practice common Japanese words and their meanings',
+    description: 'Practice typing English meanings for Japanese words',
   },
 ];
 
